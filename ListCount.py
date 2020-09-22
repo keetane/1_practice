@@ -1,71 +1,69 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[29]:
+# In[1]:
 
 
 from pathlib import Path
 import glob
 import os
-import subprocess
-subprocess.run(['jupyter', 'nbconvert', '--to', 'python', 'List&Count.ipynb'])
 
 
-# In[18]:
+# In[2]:
 
 
 p = Path(".")
 
 
-# In[19]:
+# In[3]:
 
 
 list(p.glob("*"))
 
 
-# In[20]:
+# In[5]:
 
 
+Lmp4 = list(p.glob("*.mp4"))
 list(p.glob("*.mp4"))
 
 
-# In[24]:
+# In[6]:
 
 
 glob.glob("*")
 
 
-# In[25]:
+# In[8]:
 
 
+lmp4 = glob.glob("/Users/keetane/Downloads/YouTube/*.mp4")
 glob.glob("/Users/keetane/Downloads/YouTube/*.mp4")
 
 
-# In[26]:
+# In[14]:
 
 
 path = os.getcwd()  
 files = os.listdir(path)  
 count = len(files)  
-print(count) 
+print("the number of files in this directory is " + str(count))
 
 
-# In[27]:
+# In[12]:
 
 
+nmp4 = len(glob.glob('*.mp4'))
+nmp3 = len(glob.glob('*.mp3'))
 len(glob.glob('*.mp4'))
-
-
-# In[28]:
-
-
 len(glob.glob('*.mp3'))
 
 
-# In[32]:
+# In[13]:
 
 
-get_ipython().system('jupyter nbconvert --to python List&Count.ipynb')
+print('number of mp4 file is ' + str(nmp4))
+print('number of mp3 file is ' + str(nmp3))
 
 
 # In[ ]:
